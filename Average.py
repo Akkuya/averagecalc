@@ -1,22 +1,27 @@
+def averageCalc():
+    def average():
+        enter = input()  # Enter your numbers
+        try:
+            # Checks if the input can be converted into an float
+            average.floatEnter = float(enter)
+        except ValueError:  # If it can't be converted into an float
+            print("Not a valid number, please try again")
+            average()  # Call back
 
-def average():
-    enter = input()
-    try:
-        average.intEnter = int(enter)
+    numbers = input("Enter how many numbers you wish to find the average of.")
 
-    except ValueError:
-        print("Not a valid number, please try again")
+    sum1 = 0
+    for i in range(int(numbers)):  # Asks for all the  numbers
+        print("Please enter number " + str(i + 1))
         average()
+        sum1 = sum1+average.floatEnter
+
+    # Calculates the average.
+    average = sum1/int(numbers)
+
+    # Prints the average
+    print("The average of all " + str(numbers) + " numbers is " + str(average))
 
 
-numbers = input("Enter how many numbers you wish to find the average of.")
-
-sum1 = 0
-for i in range(int(numbers)):
-    print("Please enter number " + str(i + 1))
-    average()
-    sum1 = sum1+average.intEnter
-
-average = sum1/int(numbers)
-
-print("The average of all " + str(numbers) + " numbers is " + str(average))
+while True:  # Infinite Loop
+    averageCalc()
