@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['average.py'],
-             pathex=['c:\\Users\\xyz\\Downloads\\Test'],
+             pathex=['C:\\Users\\xyz\\Downloads\\Test'],
              binaries=[],
              datas=[],
              hiddenimports=[],
